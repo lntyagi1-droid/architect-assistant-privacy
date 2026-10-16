@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Workbench4Dev — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--bg:#ffffff;--fg:#1c2b33;--muted:#5b6b73;--accent:#17707a;--line:#dfe6e9;--soft:#f3f8f8}
+@media (prefers-color-scheme:dark){:root{--bg:#0f2433;--fg:#e4eef2;--muted:#9bb4bf;--accent:#6fd3e0;--line:#24435a;--soft:#143247}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+main{max-width:820px;margin:0 auto;padding:40px 22px 80px}
+h1{font-size:2rem;margin:0 0 .6rem;color:var(--accent)}
+h2{font-size:1.2rem;margin:2.2rem 0 .5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+a{color:var(--accent)} hr{display:none}
+code{background:var(--soft);padding:1px 6px;border-radius:5px;font-size:.88em}
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+</style>
+</head><body><main>
+<h1 id="workbench4dev--privacy-policy">Workbench4Dev — Privacy
+Policy</h1>
+<p><strong>Effective date:</strong> October 16, 2026 <strong>Applies
+to:</strong> the Workbench4Dev Chrome extension (all versions)</p>
+<p>Workbench4Dev is a browser extension that helps Salesforce admins,
+developers and architects explore and analyze their own Salesforce org
+(metadata, schema, permissions, Apex, debug logs and more) using the
+Salesforce session already open in their browser.</p>
+<p><strong>The short version:</strong> Workbench4Dev works entirely
+inside your browser. It talks only to your own Salesforce org. We do not
+run servers that collect your data, we do not use analytics or
+advertising trackers, and we never sell or share your information.</p>
+<hr />
+<h2 id="1-what-the-extension-accesses">1. What the extension
+accesses</h2>
+<p>To do its job, Workbench4Dev accesses the following <strong>only
+while you use it, and only on your device</strong>:</p>
+<ul>
+<li><strong>Your Salesforce session.</strong> The extension reads the
+Salesforce session cookie for the org you have open so it can call
+Salesforce APIs (REST, Tooling, Metadata and SOAP) <em>as you</em>, with
+your existing permissions. The session identifier is used in memory for
+those requests. It is never stored by us, never logged, and never sent
+anywhere except back to your own Salesforce domain.</li>
+<li><strong>Salesforce org data you choose to view.</strong> This can
+include object and field metadata, permissions, flows, Apex classes and
+triggers, debug logs, setup audit trail entries, and — when you run
+queries or open record-related tools — record data. This data is fetched
+directly from Salesforce to your browser and displayed there.</li>
+<li><strong>Browser tab information.</strong> The extension checks which
+open tabs are Salesforce pages so it can detect your connected org and
+open its tools next to your org tab.</li>
+</ul>
+<h2 id="2-what-is-stored-on-your-device">2. What is stored on your
+device</h2>
+<p>Workbench4Dev saves a small amount of data <strong>locally in your
+browser</strong> (extension storage and browser local/session storage)
+to make the tool convenient:</p>
+<ul>
+<li>Preferences (theme, collapsed menu sections, panel layout,
+opt-ins)</li>
+<li>Recently viewed items and tool history (for example Developer
+Console query/Apex history and code-analyzer scan history)</li>
+<li>Tags, ignore lists and audit-log entries that you create inside the
+extension</li>
+<li>Temporary Ask-Your-Org conversation history for the current browser
+session</li>
+</ul>
+<p>This data stays on your device. It is not transmitted to us or to any
+third party. You can remove it at any time by clearing the extension's
+data in Chrome or by uninstalling the extension.</p>
+<h2 id="3-what-is-sent-off-your-device">3. What is sent off your
+device</h2>
+<p><strong>Salesforce data and your session are never sent to the
+developer or to any third-party server.</strong> Network requests made
+by the extension go to:</p>
+<ol type="1">
+<li><strong>Your own Salesforce domains</strong> (for example
+<code>*.salesforce.com</code>, <code>*.force.com</code>,
+<code>*.salesforce-setup.com</code>) — to read the org data you ask to
+see, and to perform actions you explicitly trigger (such as enabling a
+debug trace flag or running code in a sandbox).</li>
+<li><strong>Web3Forms (<code>api.web3forms.com</code>)</strong> —
+<strong>only if you choose to submit the in-app "Help &amp; Feedback"
+form.</strong> See section 4.</li>
+</ol>
+<p>There are no analytics, crash reporters, advertising SDKs or remote
+code in the extension.</p>
+<h2 id="4-feedback-form">4. Feedback form</h2>
+<p>When you press <strong>Send Feedback</strong>, the extension sends
+the following to the Workbench4Dev team through the third-party form
+service <a href="https://web3forms.com">Web3Forms</a>:</p>
+<ul>
+<li>Your message and the category you selected (feature request, bug
+report or general question)</li>
+<li>Your email address, <strong>only if you type one</strong> (it is
+optional and used only to reply to you)</li>
+<li>Optional diagnostics, <strong>only if the "Include diagnostics" box
+is ticked</strong>: extension version, Salesforce API version, the
+connected org's domain name, the active panel name and your browser's
+user-agent string. Diagnostics never include your Salesforce records,
+credentials or session information.</li>
+</ul>
+<p>We use this information solely to understand and respond to your
+feedback and to improve Workbench4Dev. Web3Forms processes the
+submission to deliver it to us; see the <a
+href="https://web3forms.com/privacy">Web3Forms privacy policy</a> for
+how they handle data. Please do not include passwords or sensitive
+personal data in your message.</p>
+<h2 id="5-why-each-permission-is-needed">5. Why each permission is
+needed</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Permission</th>
+<th>Why it is needed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cookies</code></td>
+<td>Read the Salesforce session cookie of the org you are using, so API
+requests run with your own login. No cookies are read from other
+sites.</td>
+</tr>
+<tr class="even">
+<td><code>storage</code></td>
+<td>Save your preferences, history and tags locally on your device.</td>
+</tr>
+<tr class="odd">
+<td><code>tabs</code></td>
+<td>Detect open Salesforce tabs, identify the connected org, and open
+Workbench4Dev tools beside your org tab.</td>
+</tr>
+<tr class="even">
+<td>Salesforce host access (<code>*.salesforce.com</code>,
+<code>*.force.com</code>, <code>*.salesforce-setup.com</code>,
+<code>*.lightning.force.com</code>, <code>*.visualforce.com</code>,
+<code>*.my.site.com</code>, <code>*.cloud.force.com</code>)</td>
+<td>Call Salesforce APIs for your org and show the small launcher tab on
+Salesforce pages.</td>
+</tr>
+<tr class="odd">
+<td><code>api.web3forms.com</code></td>
+<td>Deliver feedback you choose to submit (section 4).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-chrome-web-store-limited-use-commitment">6. Chrome Web Store
+"Limited Use" commitment</h2>
+<p>The use of information received from Chrome APIs and Salesforce will
+adhere to the <a
+href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome
+Web Store User Data Policy</a>, including the Limited Use requirements.
+Specifically:</p>
+<ul>
+<li>Data is used only to provide and improve the single purpose of the
+extension: analyzing and exploring your Salesforce org.</li>
+<li>Data is <strong>not</strong> sold or transferred to third parties,
+except as described in section 4 for feedback you submit.</li>
+<li>Data is <strong>not</strong> used for advertising, creditworthiness
+or lending decisions, or unrelated purposes.</li>
+<li>No human reads your Salesforce data; it never leaves your
+browser.</li>
+</ul>
+<h2 id="7-security">7. Security</h2>
+<p>All communication with Salesforce and Web3Forms uses HTTPS. The
+extension runs with a strict content security policy
+(<code>script-src 'self'</code>), loads no remote scripts, and keeps
+your session token only in memory for the duration of requests. Because
+the tool acts with your Salesforce permissions, you should use it only
+on orgs you are authorized to access, and take the same care as you
+would with any Salesforce admin tool.</p>
+<h2 id="8-data-retention-and-your-choices">8. Data retention and your
+choices</h2>
+<ul>
+<li><strong>Local data:</strong> kept until you clear it or uninstall
+the extension.</li>
+<li><strong>Feedback submissions:</strong> kept only as long as needed
+to respond and improve the product. You can ask us to delete a
+submission you sent by opening an issue in this repository's Issues tab
+(do not post personal details publicly — say that you'd like a private
+follow-up).</li>
+<li><strong>Control:</strong> you can disconnect at any time by logging
+out of Salesforce, closing the org tab, or removing the extension.</li>
+</ul>
+<h2 id="9-childrens-privacy">9. Children's privacy</h2>
+<p>Workbench4Dev is a professional developer tool and is not directed to
+children under 16. We do not knowingly collect personal information from
+children.</p>
+<h2 id="10-changes-to-this-policy">10. Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published at this
+location with a new effective date. Material changes will also be noted
+in the extension's release notes.</p>
+<h2 id="11-not-affiliated-with-salesforce">11. Not affiliated with
+Salesforce</h2>
+<p>Workbench4Dev is an independent tool. Salesforce, Lightning, Apex and
+related names are trademarks of Salesforce, Inc., used here only to
+describe compatibility. This extension is not affiliated with, endorsed
+by or sponsored by Salesforce, Inc.</p>
+<h2 id="12-contact">12. Contact</h2>
+<p>Questions about this policy or your data? Open an issue in this
+GitHub repository, or use <strong>Help &amp; Feedback</strong> inside
+the extension.</p>
+</main></body></html>
